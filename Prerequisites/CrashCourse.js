@@ -51,6 +51,7 @@ console.log(f>15 || 15>g);
 //logical
 console.log(f!=11); //! means not
 
+//ternary operator
 let age = 20;
 let status = age<18 ? "kid":"adult";
 console.log(status);
@@ -92,3 +93,87 @@ console.log((100).toString());
 
 console.log(Boolean(10));
 console.log(Boolean(null));  //null, undefined,0, '',Nan are all 0
+
+
+//equality
+const abc ='100'
+const def = 100;
+console.log(abc==def);  //string gets converted to number as implicit
+console.log(abc===def); //string=number, cant be true so === gives false
+
+//conditional statements
+
+let num = 0;
+
+if(num>0){
+    console.log("Positive")
+}
+else if(num<0){
+    console.log("Negative");
+}
+else{
+    console.log("Zero")
+}
+
+let color = '';
+
+switch(color){
+    case "red" :
+        console.log("It's red");
+        break;
+    case "green" :
+        console.log("It's green");
+    default :
+        console.log("No color");
+        break;
+}
+
+
+//looping code
+for(i=1;i<=5;i++){
+    console.log("Iteration no: "+i);
+}
+let j=2;
+while(j<=6){
+    console.log("Iteration no: "+j);
+    j++;
+}
+let k = 3;
+do{
+    console.log("Iteration no: "+k);
+    k++;
+}while(k<=7);
+
+const numbah =[1,2,3,4,5,6,7,8,9,10];
+
+for(num of numbah){
+    console.log("Number: "+num);
+}
+
+//function
+function greet(name){
+    console.log("hello "+name)
+}
+greet("Mahin");
+
+function add(x,y){
+    return (x+y);
+}
+let sum = add(3,4);
+console.log(sum);
+
+
+//arrow function
+const total = (a,c)=>{
+    return a+c;
+}
+console.log(total(1,1));
+
+//scope
+
+//parenthesis er modhe thakle, oitar modhei access kora jabe
+//function er modhe thakleo same
+//global thakle alada kotha, shob jaiga thekei access kora jabe
+
+//continue mane skips the current iteration
+//break mane loop breaks entirely
