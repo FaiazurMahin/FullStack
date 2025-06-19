@@ -1,0 +1,129 @@
+*{
+    margin:0px;
+    padding:0px;
+    /* resets any default margin or padding for anything, make your own now buddy */
+}
+/* global styles */
+a{
+    text-decoration: none;
+    /* globally edits any links */
+    color: maroon
+}
+a:hover{
+    color:rgb(61, 30, 116);
+}
+a:active{
+    color: white;
+}
+a:visited{
+    color: black;
+}
+
+body{
+    color:blue;
+    background-color: rgba(194, 187, 178, 0.071);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6em;
+    margin: 0;
+
+    /* font: bold 20px sans-serif;  */
+    /* that font shortcut has specific serial to maintain */
+}
+/* id use korbo jokhon uniqie, class use korbo jokhon oita onno jaigai o use korte pari */
+.container{
+    width: 80%;
+    /* container er bhitor width % use korle better,
+    tahole better responsive hoi jinishta */
+    margin:auto;
+}
+
+.box1{
+    line-height: 1.8em;
+    background-color: rgba(136, 136, 115, 0.21);
+    color: black;
+    font-family: cursive;
+    padding: 5px 5px 20px 20px;
+    /* border-color: rgb(41, 0, 0); */
+    border-top: 10px solid rgba(67, 5, 5, 0.961); 
+    border-bottom: 10px solid rgb(63, 0, 0); 
+    border-left: 20px double rgba(75, 0, 0, 0.975); 
+    border-right: 20px double rgba(58, 1, 1, 0.95);  
+    
+    /* border emne likhte hoi arki */
+    margin: 20px 20px 20px 20px;
+    
+}
+
+.box1 h1{
+    padding: 7px;
+    border: 5px dotted rgb(63, 4, 4);
+    color: rgb(92, 5, 5);
+    font-weight: 50;
+    font-style: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration:wavy;
+    letter-spacing: 0.01em;
+    word-spacing: 0.1em;
+    
+}
+.box2{
+    line-height: 1.6em;
+
+    margin: 20px 20px 20px 20px;
+    border: 20px double maroon;
+    padding: 20px;
+    background-color: beige;
+    color: black;
+}
+
+.box2 h1{
+
+    margin: 5px;
+    border: 5px solid maroon;
+    padding: 5px;
+
+    font-weight: 50;
+    text-align: center;
+
+    color: maroon;
+    font-family: cursive;
+
+    font-size: larger;
+}
+
+
+.Categories{
+    margin: 5px;
+    border: 5px solid maroon;
+    padding: 30px;
+    background-color: beige;
+    
+    line-height: 1.6em;
+
+    font-family: cursive;
+    font-size: 20px;
+}
+
+.Categories h2{
+    color: maroon;
+    margin: 5px;
+    border: 5px solid maroon;
+    padding: 10px;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+ul{
+    list-style: square;
+    color:maroon
+}
+
+li{
+    margin: 2px;
+    border-bottom: 2px dotted maroon;
+    padding: 9px;
+    list-style-image: url("Checkmark.png");
+    
+}
