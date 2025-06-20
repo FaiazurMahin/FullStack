@@ -19,6 +19,14 @@ a:visited{
     color: black;
 }
 
+label:hover{
+    color:blue;
+}
+#button:hover{
+    color:blue;
+}
+
+
 body{
     color:blue;
     background-color: rgba(194, 187, 178, 0.071);
@@ -36,6 +44,16 @@ body{
     /* container er bhitor width % use korle better,
     tahole better responsive hoi jinishta */
     margin:auto;
+    background-image:url("Naruto.jpg") ;
+    background-repeat: none;
+}
+
+#button{
+   background-color: black;
+   color:white;
+   font-family: cursive;
+   font-weight: bold;
+   /* margin: 0px 50%; */
 }
 
 .box1{
@@ -126,4 +144,169 @@ li{
     padding: 9px;
     list-style-image: url("Checkmark.png");
     
+}
+
+#form-id{
+    margin: 20px 0px;
+    border: 10px double maroon;
+    padding: 20px;
+    background-color: beige;
+}
+
+#form-id .form-group{
+    /* border-bottom: 2px solid maroon; */
+    padding: 3px;
+    margin: 1px 0px
+}
+
+#form-id label{
+    display:block;
+}
+
+#form-id input , #form-id textarea{
+    padding:5px;
+    width: 100%;
+}
+
+/* #form-id textarea{
+    width: 100%;
+    can do at once if same styel bt putting comma,
+    check above selector
+} */ 
+#form-id .button{
+   background-color: black;
+   color:white;
+   font-family: cursive;
+   font-weight: bold;
+   /* margin: 0px 50%; */
+}
+
+
+.block{
+    float:left;
+    width:33.33%;
+    border: 5px solid maroon;
+    padding:5px;
+    /* margin:5px; 
+    this is the problem with css..eita add korle
+     niche chole jai...this is where flexbox comes*/  
+    box-sizing: border-box;
+    font-family: cursive;;
+    font-size: large;
+    line-height: 1.6em;
+    background-color: beige
+}
+.block h1{
+    border:2px double maroon;
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+    background-color: rgb(255, 255, 255);
+    height: 20px;
+}
+
+
+.mainblock{
+    float: left;
+    width:70%;
+    box-sizing: border-box;
+    background-color: beige;
+    border: 5px solid maroon;
+}
+
+.sidebar{
+    float: right;
+    width: 30%;
+    box-sizing: border-box;
+    background-color: beige;
+    border: 5px solid maroon;
+}
+.clear {
+    clear: both;
+    background-color: white;
+    height: 20px;
+}
+
+.p-box{
+    margin: 20px;
+    border: 2px solid maroon;
+    width:500px;
+    height:500px;
+    position: relative;
+}
+
+.p-box h1{
+    color: maroon;
+    position:absolute;
+    top:0;
+    bottom:0; 
+}
+
+.p-box h2{
+    color: maroon;
+    position:absolute;
+    top: 40px;
+    bottom:30px; 
+}
+
+.p-box h3{
+    position:absolute;
+    top: 80px;
+    bottom:60px; 
+}
+
+/* absolute removes tags from documentation,
+and positions itself to its parents or gparents
+side and positions itself with the help of top and bottom */
+
+.p-box2{
+    margin: 20px;
+    border:5px solid maroon;
+    padding: 20px;
+    width:500px;
+    height:500px;
+}
+
+.p-box2 h1{
+    position: fixed;
+    top:0;
+    bottom:0; 
+    /* stays fixed where I fixed it */
+
+}
+
+.p-box3{
+    margin: 20px;
+    border:5px solid maroon;
+    padding: 20px;
+    width:500px;
+    height:500px;
+}
+
+.p-box3 h1{
+    position:sticky;
+    top:100px;
+    bottom:100px;
+}
+
+.pseudocodes li:nth-child(even){
+    color:black;
+    font-family: cursive;
+    background: white;
+}
+
+/* min height makes the content stay inside a box or anything
+and even makes it responsive */
+
+/* @media{
+ekhane class diye float none ar width 100% korlei, screen choto korle 
+float 0 hoye jabe ar responsive hoye jabe} */
+
+@media(max-width:600px){
+    .block{
+        float: none;
+        width:100%;
+    }
 }
