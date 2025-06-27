@@ -1,12 +1,43 @@
 import React from 'react'
 import jobs from '../jobs.json'
 import JobListing from './JobListing'
+import Spinner from './Spinner'
+
+import { useState, useEffect } from 'react'
 
 const JobListings = ({showalljobs=false}) => {
-const recentJobs = jobs.slice(0,3);   // 3ta kore jate dekhai
-console.log(showalljobs)
 
-const showornot =  !showalljobs ? recentJobs : jobs;
+  
+// const recentJobs = jobs.slice(0,3);   // 3ta kore jate dekhai
+const [jobs,setjob] = useState([]); //empty array karon karon we wanna record the response of the api,
+// when we use useeffect
+const [loading, setloading] =useState(true);  //reload korle jate loading je hoche sheta dekhai
+//ekhane true dibo karon..fetch er time e jate loading dekhai..shesh hole false
+
+//useeffect ekta function arekta dependance array nei,aray te oita dibo jeta change hobe
+//everytime that thing changes in that array, the useEffect will run
+
+useEffect(()=>{
+  const fetchjobs = async ()=>{
+
+    const apiurl = !showalljobs ? 'api/jobs/?_limit=3' : 'api/jobs/' 
+
+    try{
+      const response = await fetch(apiurl);
+    const data = await response.json(); 
+    setjob(data);
+    }
+    catch (error){
+      console.log('Error Fetching', error)
+    }
+    finally{
+      setloading(false);
+    }
+  }
+  fetchjobs();
+},[])
+
+// const showornot =  !showalljobs ? recentJobs : jobs;
   return (
     <>
     {/* <!-- Browse Jobs --> */}
@@ -16,12 +47,16 @@ const showornot =  !showalljobs ? recentJobs : jobs;
           {!showalljobs? 'Browse jobs':'All jobs'} 
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
           {/* <!-- Job Listing 1 --> */}
-          {showornot .map((job)=>(
+
+          {loading ? <Spinner/> : 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {jobs .map((job)=>(
             <JobListing key={job.id} job={job}/>
         ))}
         </div>
+          }
       </div>
     </section>
     </>

@@ -1,6 +1,7 @@
 import React from 'react'
 import JobListings from '../Components/JobListings'
 
+
 const Jobspage = () => {
   return (
     <>
