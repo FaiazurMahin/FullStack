@@ -144,3 +144,48 @@
 //     console.log("congrats", value);
 // });
 
+//Promise example
+
+// const A = new Promise((resolve,reject)=>{
+//     let ordersuccess=false;
+//     if(ordersuccess){
+//         setTimeout(()=>{
+//             resolve("A Done")
+//         },5000);
+//     }
+//     else{
+//         setTimeout(()=>{
+//             reject("A not done")
+//         },3000);
+//     }
+// })
+
+// const B = new Promise((resolve)=>{
+//     setTimeout(()=>{
+//         resolve("B done")
+//     },1000);
+// })
+
+// Promise.all([A,B])
+// .then((message)=>{
+//     console.log("Fulfilled", message);
+// })
+// .catch((err)=>{
+//     console.log("Unfulfilled", err);
+// });
+
+
+
+
+
+
+// A
+// .then((message)=>{
+//     console.log("Done", message);
+// })
+// .then(()=>{
+//     console.log("Ready to go");
+// })
+// .catch((err)=>{
+//     console.log("Not Done", err);
+// });

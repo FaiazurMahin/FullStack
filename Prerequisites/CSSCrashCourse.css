@@ -232,16 +232,18 @@ li{
 .p-box{
     margin: 20px;
     border: 2px solid maroon;
+    padding: 0px 50px;
     width:500px;
     height:500px;
     position: relative;
 }
 
 .p-box h1{
-    color: maroon;
+    color: rgb(60, 30, 30);
     position:absolute;
     top:0;
     bottom:0; 
+    padding: 0px 50px; 
 }
 
 .p-box h2{
@@ -270,6 +272,7 @@ side and positions itself with the help of top and bottom */
 }
 
 .p-box2 h1{
+    color: greenyellow;
     position: fixed;
     top:0;
     bottom:0; 
